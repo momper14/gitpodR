@@ -6,5 +6,6 @@ RUN R -e 'remotes::install_cran("remotes")'
 RUN R -e 'remotes::install_cran("dockerfiler")'
 RUN R -e 'remotes::install_cran("devtools")'
 EXPOSE 8787
+VOLUME [ "/var/lib/rstudio-server" ]
 ENV PASSWORD="strongpassword"
 ENV USER="Mo"
